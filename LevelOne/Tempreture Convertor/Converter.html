@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="convertor.css">
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    
+    .conversion-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .conversion-button {
+      width: 80px;
+      height: 40px;
+    }
+    
+    .result-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 160px;
+      height: 40px;
+      border: 1px solid #000;
+      font-weight: bold;
+    }
+  </style>
+  <script src="convertor.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Temperature Converter</h1>
+    <div class="conversion-grid">
+      <button class="conversion-button" onclick="selectConversion('fahrenheit_to_celsius')">F-C</button>
+      <button class="conversion-button" onclick="selectConversion('celsius_to_fahrenheit')">C-F</button>
+      <button class="conversion-button" onclick="selectConversion('kelvin_to_celsius')">K-C</button>
+      <button class="conversion-button" onclick="selectConversion('celsius_to_kelvin')">C-K</button>
+      <button class="conversion-button" onclick="selectConversion('kelvin_to_fahrenheit')">K-F</button>
+      <button class="conversion-button" onclick="selectConversion('fahrenheit_to_kelvin')">F-K</button>
+    </div>
+    <div>
+      <input type="text" id="temperatureInput" placeholder="Enter temperature">
+      <button class="Convert_btn" onclick="convertTemperature()">Convert</button>
+    </div>
+    <div class="display_container"> <div class="result-container" id="resultContainer"></div> <button class="Clear_btn" onclick="clearDisplay()">Clear</button></div>
+   
+  </div>
+</body>
+</html>

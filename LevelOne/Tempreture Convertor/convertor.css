@@ -1,0 +1,68 @@
+.conversion-button {
+    width: 80px;
+    height: 40px;
+    background-color: #A9BDA1;
+    border: 1px solid #b2b2b2ba;
+    color: #000;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  }
+ 
+  .conversion-button.selected {
+    background-color: rgb(231, 128, 17);
+    color: #fff;
+    font-weight: 800;
+  }
+  body{
+    background-color: #567B57;
+
+  }
+ h1{
+    color: #f6f6f6;
+ }
+  .result-container{
+    background-color: #e6ba91;
+    margin-top: 13px;
+    margin-right: 10px;
+    color: #1c0202;
+    font-weight: 900;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    border-radius: 10px;
+  }
+  #temperatureInput{
+    padding: 10px;
+    background-color: #DD9D7C;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+    width: 160px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+  }
+  .Convert_btn{
+    padding: 10px;
+    background-color: #D24C4A;
+    color: #fff;
+    font-weight: 800;
+    border: 1px solid #b2b2b240;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  }
+  .Clear_btn{
+    padding: 10px;
+    background-color:#75a776;
+    color: #fff;
+    font-weight: 800;
+    border: 1px solid #b2b2b240;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+
+  }
+  .display_container{
+    display: flex;
+  }

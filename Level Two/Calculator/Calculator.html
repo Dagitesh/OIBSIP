@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <h1>Calculator</h1>
+
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <button class="operator">+</button>
+    <button class="operator">-</button>
+    <button class="operator">*</button>
+    <button class="operator">/</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>0</button>
+    <button>.</button>
+    <button id="equals">=</button>
+    <button id="clear">C</button>
+  </div>
+
+  <script>
+    const display = document.getElementById('display');
+    const buttons = document.querySelectorAll('.calculator button');
+    const equalsButton = document.getElementById('equals');
+    const clearButton = document.getElementById('clear');
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        if (button.innerText === '=') {
+          calculate();
+        } else if (button.innerText === 'C') {
+          clearDisplay();
+        } else {
+          addToDisplay(button.innerText);
+        }
+      });
+    });
+
+    equalsButton.addEventListener('click', calculate);
+    clearButton.addEventListener('click', clearDisplay);
+
+    function addToDisplay(value) {
+      display.value += value;
+    }
+
+    function calculate() {
+      try {
+        const result = eval(display.value);
+        display.value = result;
+      } catch (error) {
+        display.value = 'Error';
+      }
+    }
+
+    function clearDisplay() {
+      display.value = '';
+    }
+  </script>
+</body>
+</html>
